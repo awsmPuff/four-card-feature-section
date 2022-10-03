@@ -1,0 +1,142 @@
+:root {
+    --red: hsl(0, 78%, 62%);
+    --cyan: hsl(180, 62%, 55%);
+    --orange: hsl(34, 97%, 64%);
+    --blue: hsl(212, 86%, 64%);
+    --very-dark-blue: hsl(234, 12%, 34%);
+    --grayish-blue: hsl(229, 6%, 66%);
+    --very-light-gray: hsl(0, 0%, 98%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+html {
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    font-weight: 400;
+    color: var(--very-dark-blue);
+}
+
+p {
+    color: var(--grayish-blue);
+    line-height: 23px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 1100px;
+    height: max-content;
+    gap: 40px;
+}
+
+section.heading {
+    text-align: center;
+    width: 500px;
+}
+section.heading h1 {
+    font-weight: 200;
+    font-size: 1.8rem;
+}
+section.heading h2 {
+    font-weight: 600;
+    font-size: 1.8rem;
+    margin: 8px auto;
+}
+
+section.cards {
+    display: flex;
+    gap: 30px;
+}
+.area {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: center;
+}
+.card {
+    position: relative;
+    width: 360px;
+    height: 230px;
+    padding: 30px;
+    border-radius: 5px;
+    border-top: solid 5px var(--blue);
+    box-shadow: 0 5px 30px 0px rgba(171, 186, 210, 0.4);
+}
+.card h3 {
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+.card img {
+    width: 55px;
+    height: 55px;
+    position: absolute;
+    right: 30px;
+    bottom: 30px;
+}
+.c-1 {
+    border-color: var(--cyan);
+}
+.c-2 {
+    border-color: var(--red);
+}
+.c-3 {
+    border-color: var(--orange);
+}
+
+
+@media screen and (max-width: 480px) {
+    main {
+        width: 90%;
+        gap: 60px;
+    }
+    section.heading {
+        width: 100%;
+    }
+    section.heading h1 {
+        font-size: 1.5rem;
+    }
+    section.heading h2 {
+        font-size: 1.5rem;
+        margin: 5px auto;
+    }
+    p {
+        font-size: 0.9rem;
+        line-height: 20px;
+    }
+    section.cards {
+        flex-direction: column;
+        gap: 25px;
+        width: 100%;
+    }
+    .area {
+        gap: 25px;
+    }
+    .card {
+        width: 100%;
+        height: 200px;
+    }
+    .card h3 {
+        margin-bottom: 5px;
+    }
+    .card img {
+        width: 45px;
+        height: 45px;
+    }
+}
